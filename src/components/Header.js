@@ -1,21 +1,23 @@
 import React from "react"
-import logo from "../logo.svg"
 
+import { NavLink } from "react-router-dom"
+
+import "./Header.css"
 const Header = props => {
   return (
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <ul>
+        <li>
+          <NavLink exact to="/" activeClassName="selected" className="link">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/search" activeClassName="selected" className="link">
+            Search
+          </NavLink>
+        </li>
+      </ul>
     </header>
   )
 }

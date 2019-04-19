@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+}
+li {
+  margin: 5px;
+}
+.link {
+  color: #fff;
+  fill: currentColor;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+}
+.link:hover {
+  color: rgb(164, 0, 0);
+}
+.selected {
+  color: rgb(164, 0, 0);
+  text-decoration: none;
+  font-size: calc(10px + 2vmin);
+}
