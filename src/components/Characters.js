@@ -10,7 +10,8 @@ class Characters extends Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value }, () => {
       if (this.state.search && this.state.search.length > 1) {
-        setTimeout(() => {
+        clearTimeout(this.timeOut)
+        this.timeOut = setTimeout(() => {
           let resultSearch = this.state.data.filter(
             character =>
               character.name
@@ -18,7 +19,7 @@ class Characters extends Component {
                 .indexOf(this.state.search.toLowerCase()) !== -1
           )
           this.setState({ filterData: resultSearch })
-        }, 1000)
+        }, 400)
       } else if (!this.state.search) {
       }
     })
